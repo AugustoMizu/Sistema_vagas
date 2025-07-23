@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Augusto Barros">
+    <link rel="shortcut icon" type="image/x-icon" href="icon-nav.jpg">
+    <link rel="icon" type="image/png" href="icon-nav.jpg">
+    <title>Vagas - Encontre sua vaga de emprego</title>
+
+    <!-- Meta tags para SEO -->
+    <meta name="description"
+        content="Encontre as melhores vagas de emprego no Brasil. Milhares de oportunidades em diversas áreas profissionais.">
+    <meta name="keywords" content="vagas, emprego, trabalho, carreira, oportunidades">
+
+    <!-- Fontes do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Incluir header -->
+    <div id="header-container"></div>
+
+    <!-- Conteúdo principal da página -->
+    <main>
+        <!-- Seção Hero - Área principal de destaque -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <!-- Conteúdo textual do hero -->
+                    <div class="hero-text">
+                        <h6 class="hero-subtitle animate-fade-in-up">Sua nova carreira te espera</h6>
+                        <h1 class="hero-title animate-fade-in-up">Encontre sua vaga de emprego</h1>
+
+                        <!-- Formulário de busca principal -->
+                        <div class="search-form animate-fade-in-up">
+                            <div class="search-inputs">
+                                <div class="search-field">
+                                    <i class="fas fa-search"></i>
+                                    <input type="text" placeholder="Cargo ou palavra-chave" class="search-input">
+                                </div>
+                                <div class="search-field">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <input type="text" placeholder="Cidade ou estado" class="search-input">
+                                </div>
+                                <button class="btn btn-primary search-btn">
+                                    <span>Buscar</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Imagem ilustrativa do hero -->
+                    <div class="hero-image animate-slide-in-right">
+                        <img src="https://picsum.photos/id/4/400/500" alt="Pessoa procurando emprego"
+                            class="floating-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Oportunidades -->
+        <section id="vagas" class="opportunities">
+            <div class="container">
+                <h2 class="section-title animate-fade-in-up">Oportunidades para sua carreira</h2>
+
+                <div class="opportunities-grid">
+                    <!-- Card de oportunidade 1 -->
+                    <div class="opportunity-card card-green animate-fade-in-up">
+                        <div class="card-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Entre na Área de Tecnologia</h3>
+                        <p>Descubra as melhores vagas em desenvolvimento, design e inovação.</p>
+                        <a href="#" class="card-link">Explorar vagas</a>
+                    </div>
+
+                    <!-- Card de oportunidade 2 -->
+                    <div class="opportunity-card card-purple animate-fade-in-up">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>A Vagas está contratando!</h3>
+                        <p>Venha fazer parte do nosso time e ajudar pessoas a encontrarem seus empregos dos sonhos.</p>
+                        <a href="#" class="card-link">Ver oportunidades</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre a Plataforma -->
+        <section id="sobre" class="about-platform">
+            <div class="container">
+                <div class="about-content">
+                    <!-- Imagem lateral -->
+                    <div class="about-image animate-slide-in-left">
+                        <img src="https://picsum.photos/400/350?random=10" alt="Profissional sorrindo"
+                            class="floating-image">
+                    </div>
+
+                    <!-- Conteúdo textual -->
+                    <div class="about-text">
+                        <h2 class="animate-fade-in-up">Estamos ao seu lado para acelerar sua jornada profissional</h2>
+
+                        <!-- Lista de recursos -->
+                        <div class="features-list">
+                            <div class="feature-item animate-fade-in-up">
+                                <div class="feature-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Plataforma de emprego gratuita</h4>
+                                    <p>Acesse milhares de vagas sem pagar nada. Nossa missão é conectar talentos com
+                                        oportunidades.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item animate-fade-in-up">
+                                <div class="feature-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Vagas de emprego para todos os perfis</h4>
+                                    <p>Desde estágios até posições executivas, temos oportunidades para todos os níveis
+                                        de experiência.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item animate-fade-in-up">
+                                <div class="feature-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Conteúdo para crescer profissionalmente</h4>
+                                    <p>Dicas de carreira, preparação para entrevistas e orientações para se destacar no
+                                        mercado.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item animate-fade-in-up">
+                                <div class="feature-icon">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Grandes empresas estão no Vagas</h4>
+                                    <p>Conecte-se com as melhores empresas do país e encontre sua oportunidade ideal.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Empresas Parceiras -->
+        <section id="empresas" class="companies">
+            <div class="container">
+                <h2 class="section-title animate-fade-in-up">As melhores empresas estão aqui oferecendo vagas de emprego
+                </h2>
+
+                <!-- Grid de logos das empresas -->
+                <div class="companies-grid animate-fade-in-up">
+                    <div class="company-logo">
+                        <img src="https://picsum.photos/120/60?random=1" alt="Empresa 1">
+                    </div>
+                    <div class="company-logo">
+                        <img src="https://picsum.photos/120/60?random=2" alt="Empresa 2">
+                    </div>
+                    <div class="company-logo">
+                        <img src="https://picsum.photos/120/60?random=3" alt="Empresa 3">
+                    </div>
+                    <div class="company-logo">
+                        <img src="https://picsum.photos/120/60?random=4" alt="Empresa 4">
+                    </div>
+                    <div class="company-logo">
+                        <img src="https://picsum.photos/120/60?random=5" alt="Empresa 5">
+                    </div>
+                    <div class="company-logo">
+                        <img src="https://picsum.photos/120/60?random=6" alt="Empresa 6">
+                    </div>
+                </div>
+
+                <!-- Botão para ver mais empresas -->
+                <div class="companies-cta animate-fade-in-up">
+                    <a href="#" class="btn btn-primary">Conhecer as empresas</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Desenvolvimento Profissional -->
+        <section class="professional-development">
+            <div class="container">
+                <h2 class="section-title animate-fade-in-up">Dicas para crescer profissionalmente</h2>
+
+                <!-- Grid de cards de dicas -->
+                <div class="tips-grid">
+                    <div class="tip-card animate-fade-in-up">
+                        <div class="tip-image">
+                            <img src="https://picsum.photos/200/300?random=1" alt="Dica 1">
+                        </div>
+                        <div class="tip-content">
+                            <h3>10 dicas para se destacar em uma entrevista de emprego</h3>
+                            <p>Preparação é fundamental para causar uma boa primeira impressão.</p>
+                            <a href="#" class="tip-link">Ler mais</a>
+                        </div>
+                    </div>
+
+                    <div class="tip-card animate-fade-in-up">
+                        <div class="tip-image">
+                            <img src="https://picsum.photos/200/300?random=2" alt="Dica 2">
+                        </div>
+                        <div class="tip-content">
+                            <h3>Como fazer um currículo que chama atenção dos recrutadores</h3>
+                            <p>Estruture seu currículo de forma clara e objetiva.</p>
+                            <a href="#" class="tip-link">Ler mais</a>
+                        </div>
+                    </div>
+
+                    <div class="tip-card animate-fade-in-up">
+                        <div class="tip-image">
+                            <img src="https://picsum.photos/200/300?random=3" alt="Dica 3">
+                        </div>
+                        <div class="tip-content">
+                            <h3>5 maneiras de se reinventar profissionalmente</h3>
+                            <p>Descubra como dar uma nova direção à sua carreira.</p>
+                            <a href="#" class="tip-link">Ler mais</a>
+                        </div>
+                    </div>
+
+                    <div class="tip-card animate-fade-in-up">
+                        <div class="tip-image">
+                            <img src="https://picsum.photos/200/300?random=4" alt="Dica 4">
+                        </div>
+                        <div class="tip-content">
+                            <h3>Networking: como construir uma rede de contatos sólida</h3>
+                            <p>Relacionamentos profissionais podem abrir muitas portas.</p>
+                            <a href="#" class="tip-link">Ler mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Depoimentos -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title animate-fade-in-up">O que dizem sobre nós</h2>
+
+                <!-- Grid de depoimentos -->
+                <div class="testimonials-grid">
+                    <div class="testimonial-card animate-fade-in-up">
+                        <div class="testimonial-content">
+                            <p>"Encontrei meu emprego dos sonhos através do Vagas. A plataforma é muito fácil de usar e
+                                tem vagas de qualidade."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://picsum.photos/50/50?random=1" alt="Maria Silva">
+                            <div class="author-info">
+                                <h4>Maria Silva</h4>
+                                <span>Desenvolvedora Frontend</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card animate-fade-in-up">
+                        <div class="testimonial-content">
+                            <p>"Como recrutador, o Vagas me ajuda a encontrar os melhores candidatos. A qualidade dos
+                                perfis é excelente."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://picsum.photos/50/50?random=2" alt="João Santos">
+                            <div class="author-info">
+                                <h4>João Santos</h4>
+                                <span>Gerente de RH</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card animate-fade-in-up">
+                        <div class="testimonial-content">
+                            <p>"Mudei de carreira aos 35 anos e o Vagas foi fundamental nessa transição. Hoje trabalho
+                                na área que sempre sonhei."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://picsum.photos/50/50?random=3" alt="Ana Costa">
+                            <div class="author-info">
+                                <h4>Ana Costa</h4>
+                                <span>Analista de Marketing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Download do App -->
+        <section class="app-download">
+            <div class="container">
+                <div class="app-content">
+                    <!-- Conteúdo textual -->
+                    <div class="app-text animate-fade-in-up">
+                        <h2>Baixe o app de vagas de emprego grátis</h2>
+                        <p>Tenha acesso a milhares de oportunidades na palma da sua mão. Receba notificações de novas
+                            vagas e candidate-se rapidamente.</p>
+
+                        <!-- Botões de download -->
+                        <div class="app-buttons">
+                            <a href="#" class="app-button">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Apple_Store_logo.svg/2048px-Apple_Store_logo.svg.png"
+                                    alt="Download na App Store">
+                            </a>
+                            <a href="#" class="app-button">
+                                <img src="https://img.icons8.com/fluent/512/google-play-store-new.png"
+                                    alt="Download no Google Play">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Imagem do app -->
+                    <div class="app-image animate-slide-in-right">
+                        <img src="logo.png" alt="App Vagas" class="floating-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Incluir footer -->
+    <div id="footer-container"></div>
+
+    <!-- Botão voltar ao topo -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript principal -->
+    <script src="script.js"></script>
+</body>
+
+</html>

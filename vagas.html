@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Augusto Barros">
+    <link rel="shortcut icon" type="image/x-icon" href="icon-nav.jpg">
+    <link rel="icon" type="image/png" href="icon-nav.jpg">
+    <title>Vagas de Emprego - Encontre sua oportunidade</title>
+
+    <!-- Meta tags para SEO -->
+    <meta name="description"
+        content="Encontre as melhores vagas de emprego no Brasil. Filtros avançados por área, localização e tipo de contrato.">
+    <meta name="keywords" content="vagas, emprego, trabalho, carreira, oportunidades, filtros">
+
+    <!-- Fontes do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="vagas-styles.css">
+</head>
+
+<body>
+    <!-- Incluir header -->
+    <div id="header-container"></div>
+
+    <!-- Conteúdo principal da página de vagas -->
+    <main class="jobs-page">
+        <!-- Seção de busca e filtros -->
+        <section class="search-section">
+            <div class="container">
+                <!-- Barra de busca principal -->
+                <div class="main-search">
+                    <div class="search-bar">
+                        <div class="search-field">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="searchInput" placeholder="Cargo, empresa ou palavra-chave"
+                                class="search-input">
+                        </div>
+                        <div class="search-field">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <input type="text" id="locationInput" placeholder="Cidade ou estado" class="search-input">
+                        </div>
+                        <button id="searchBtn" class="btn btn-primary search-btn">
+                            <span>Buscar</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Filtros rápidos -->
+                <div class="quick-filters">
+                    <button class="filter-btn" data-filter="quickApply">
+                        <i class="fas fa-bolt"></i>
+                        Candidatura rápida
+                    </button>
+                    <button class="filter-btn" data-filter="remote">
+                        <i class="fas fa-home"></i>
+                        Apenas remotas
+                    </button>
+                    <select id="salaryFilter" class="filter-select">
+                        <option value="all">Faixa salarial</option>
+                        <option value="0-3000">Até R$ 3.000</option>
+                        <option value="3000-6000">R$ 3.000 - R$ 6.000</option>
+                        <option value="6000-10000">R$ 6.000 - R$ 10.000</option>
+                        <option value="10000+">Acima de R$ 10.000</option>
+                    </select>
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="all">Todas as áreas</option>
+                    </select>
+                    <select id="levelFilter" class="filter-select">
+                        <option value="all">Todos os níveis</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de resultados -->
+        <section class="results-section">
+            <div class="container">
+                <div class="results-layout">
+                    <!-- Sidebar com filtros avançados -->
+                    <aside class="filters-sidebar">
+                        <div class="filter-group">
+                            <h3>Filtros</h3>
+                            <button id="clearFilters" class="clear-filters">Limpar filtros</button>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>Local de trabalho</h4>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="radio" name="workLocation" value="all" checked>
+                                    <span>Todos</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="radio" name="workLocation" value="remote">
+                                    <span>Remoto</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="radio" name="workLocation" value="onsite">
+                                    <span>Presencial</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>Tipo de contratação</h4>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="checkbox" value="CLT">
+                                    <span>CLT</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" value="PJ">
+                                    <span>PJ</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" value="Estágio">
+                                    <span>Estágio</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>Estado</h4>
+                            <select id="stateFilter" class="filter-select-full">
+                                <option value="all">Todos os estados</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>Nível de experiência</h4>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="checkbox" value="Júnior">
+                                    <span>Júnior</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" value="Pleno">
+                                    <span>Pleno</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" value="Senior">
+                                    <span>Senior</span>
+                                </label>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- Lista de vagas -->
+                    <div class="jobs-content">
+                        <!-- Header dos resultados -->
+                        <div class="results-header">
+                            <div class="results-info">
+                                <h2 id="resultsCount">0 vagas encontradas</h2>
+                                <p id="resultsDescription">Mostrando todas as vagas disponíveis</p>
+                            </div>
+                            <div class="sort-options">
+                                <select id="sortSelect">
+                                    <option value="relevance">Mais relevantes</option>
+                                    <option value="date">Mais recentes</option>
+                                    <option value="salary">Maior salário</option>
+                                    <option value="company">Empresa A-Z</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Lista de vagas -->
+                        <div id="jobsList" class="jobs-list">
+                            <!-- Vagas serão inseridas aqui via JavaScript -->
+                        </div>
+
+                        <!-- Paginação -->
+                        <div class="pagination">
+                            <button id="prevPage" class="pagination-btn" disabled>
+                                <i class="fas fa-chevron-left"></i>
+                                Anterior
+                            </button>
+                            <div id="pageNumbers" class="page-numbers">
+                                <!-- Números das páginas serão inseridos aqui -->
+                            </div>
+                            <button id="nextPage" class="pagination-btn">
+                                Próxima
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Painel de detalhes da vaga -->
+    <div id="jobDetailsPanel" class="job-details-panel">
+        <div class="job-details-header">
+            <button id="closeDetailsPanel" class="close-details-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="jobDetailsContent" class="job-details-content">
+            <!-- Conteúdo dos detalhes da vaga será inserido aqui via JavaScript -->
+        </div>
+    </div>
+
+    <!-- Incluir footer -->
+    <div id="footer-container"></div>
+
+    <!-- Botão voltar ao topo -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="jobs-data.js"></script>
+    <script src="script.js"></script>
+    <script src="vagas-script.js"></script>
+</body>
+
+</html>
